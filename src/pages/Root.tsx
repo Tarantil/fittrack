@@ -12,7 +12,7 @@ export default function RootLayout(){
 
     return (
         <div className="app" data-theme={darkMode?"dark":undefined}>
-                <Sidebar />
+                <Sidebar darkMode={darkMode}/>
                 <div className={classes.main}>
                     <MainNavigation onSetMode={modeHandler}/>
                     <Outlet />
