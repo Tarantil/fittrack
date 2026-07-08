@@ -1,5 +1,9 @@
 import classes from "./ToggleButton.module.css";
-export default function ToggleButton({name, ...props}){
+type ToggleButtonProps = {
+    name:string,
+    onClick:()=>void
+}
+export default function ToggleButton({name, ...props}:ToggleButtonProps){
     return (
         <label htmlFor={name} className={classes["toggle-button"]}>
             <input type="checkbox" name={name} id={name} {...props}/>

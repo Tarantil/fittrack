@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom"
 import ToggleButton from "./ToggleButton";
-
-export default function MainNavigation({onSetMode}){
+type MainNavigationProps={
+    onSetMode:()=>void
+};
+export default function MainNavigation({onSetMode}:MainNavigationProps){
     return (
         <header>
             <ul>
