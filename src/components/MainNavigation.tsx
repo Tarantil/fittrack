@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom"
+import ToggleButton from "./ToggleButton";
 
-export default function MainNavigation(){
+export default function MainNavigation({onSetMode}){
     return (
         <header>
             <ul>
@@ -9,6 +10,7 @@ export default function MainNavigation(){
                 <li><NavLink to="/progress" className={({isActive})=>isActive?'active':undefined}>Progress</NavLink></li>
                 <li><NavLink to="/workouts" className={({isActive})=>isActive?'active':undefined}>Workouts</NavLink></li>
             </ul>
+            <ToggleButton name="mode" onClick={onSetMode}/>
         </header>
     );
 }
