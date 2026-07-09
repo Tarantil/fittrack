@@ -4,17 +4,18 @@ import { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import classes from "./Root.module.css";
 export default function RootLayout(){
-    const [darkMode, setDarkMode] = useState<boolean>(false);
+    const [mode, setMode] = useState<'light'|'dark'>('light');
     
-    function modeHandler(){
-        setDarkMode((prev)=>!prev);
+    function handleModeToggle(){
+        setMode((prev)=>prev=='light'?'dark':'light');
     }
 
     return (
-        <div className="app" data-theme={darkMode?"dark":undefined}>
-                <Sidebar darkMode={darkMode}/>
+        <div className="app" data-theme={mode}>
+        
+                <Sidebar mode={mode}/>
                 <div className={classes.main}>
-                    <MainNavigation onSetMode={modeHandler}/>
+                    <MainNavigation onSetMode={handleModeToggle} toggleIsChecked={mode==='dark'}/>
                     <Outlet />
                 </div>
         </div>

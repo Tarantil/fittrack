@@ -18,9 +18,10 @@
     border-radius: 100px;
     background: rgb(from var(--color-primary) r g b / 40%);
 }
-.slider::before{
-    content: '';
+.tumbler{
     position: absolute;
+    display: flex;
+    align-items: center;
     height: 11px;
     width: 11px;
     left: 2px;
@@ -30,7 +31,7 @@
     -webkit-transition: .4s;
     transition: .4s;
 }
-.toggle-button input:checked + .slider::before{
+.toggle-button input:checked + .slider .tumbler{
     -webkit-transform: translateX(15px);
     -ms-transform: translateX(15px);
     transform: translateX(15px);
