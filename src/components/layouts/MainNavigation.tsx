@@ -1,4 +1,4 @@
-import ToggleButton from "./ToggleButton";
+import ToggleButton from "../ui/ToggleButton";
 import classes from "./MainNavigation.module.css";
 import { Moon, Sun } from 'lucide-react';
 type MainNavigationProps = {

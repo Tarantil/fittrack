@@ -111,6 +111,7 @@ h1 {
   font-weight: var(--font-weight-bold);
   line-height: var(--line-height-heading);
   letter-spacing: -0.03em;
+  margin-bottom: 10px;
 }
 h2 {
   font-size: var(--font-size-h2);
@@ -133,7 +134,4 @@ h4 {
   min-height: 100vh;
   background: var(--color-bg);
   color: var(--color-text);
-}
-h1{
-  margin-bottom: 10px;
 }

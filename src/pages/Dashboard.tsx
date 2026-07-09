@@ -1,4 +1,4 @@
-import StatsGrid from '../components/StatsGrid';
+import StatsGrid from '../components/features/StatsGrid';
 import classes from './Dashboard.module.css';
 import { Dumbbell, Flame, TrendingUp, Goal } from 'lucide-react';
 type Stat = {

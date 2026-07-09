@@ -1,5 +1,5 @@
 import StatsCard from "./StatsCard";
-import ProgressBar from '../components/ProgressBar';
+import ProgressBar from '../ui/ProgressBar';
 import classes from './StatsGrid.module.css';
 type Stat = {
     id: string,
@@ -17,7 +17,7 @@ export default function StatsGrid({stats}:StatsGridProps){
     return (<>
         <div className={classes.grid}>
             {stats.map(element=>
-            <StatsCard icon={element.icon} title={element.title}>
+            <StatsCard key={element.id} icon={element.icon} title={element.title}>
                 <>
                     <div className={classes.count}>
                         <strong>{element.unit}</strong>

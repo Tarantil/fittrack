@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
-import MainNavigation from "../components/MainNavigation";
+import MainNavigation from "../components/layouts/MainNavigation";
 import { useState } from "react";
-import Sidebar from "../components/Sidebar";
+import Sidebar from "../components/layouts/Sidebar";
 import classes from "./Root.module.css";
 export default function RootLayout(){
     const [mode, setMode] = useState<'light'|'dark'>('light');
