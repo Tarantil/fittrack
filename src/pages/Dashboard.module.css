@@ -8,8 +8,3 @@
 .head h1{
     margin-top: 0;
 }
-.cards-mini{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 20px;
-}

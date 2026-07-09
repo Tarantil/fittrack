@@ -1,0 +1,25 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+}
+.count{
+    font-size: var(--font-size-small);
+    color: var(--color-text-muted);
+    margin-bottom: 10px;
+}
+.count strong{
+    font-size: var(--font-size-h1);
+    margin-right: 5px;
+    color: var(--color-text);
+}
+
+.result{
+    font-size: var(--font-size-caption);
+    line-height: var(--line-height-heading);
+    color: var(--color-text-muted);
+}
+.result_grow{
+    color: var(--color-primary);
+}
+  

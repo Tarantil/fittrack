@@ -1,6 +1,47 @@
-import IconCard from '../components/IconCard';
+import StatsGrid from '../components/StatsGrid';
 import classes from './Dashboard.module.css';
 import { Dumbbell, Flame, TrendingUp, Goal } from 'lucide-react';
+type Stat = {
+  id: string,
+  icon: React.ReactElement,
+  title:string,
+  unit:number|string,
+  unitSuffix?:string,
+  result?:string,
+  progressBar?:number
+};
+const STATS:Stat[] =[
+  {
+    id:'workouts-this-week',
+    icon:<Dumbbell/>,
+    title:"Workouts this week",
+    unit:5,
+    result:"↑ 12% vs last week",
+  },
+  {
+    id:'current-streak',
+    icon:<Flame/>,
+    title:"Current streak",
+    unit:8,
+    unitSuffix:'days',
+    result:"Keep it up!",
+  },
+  {
+    id:'total-volume',
+    icon:<TrendingUp/>,
+    title:"Total volume",
+    unit:18400,
+    unitSuffix:'kg',
+    result:"↑ 12% vs last week",
+  },
+  {
+    id:'goal-progress',
+    icon:<Goal/>,
+    title:"Goal progress",
+    unit:'73%',
+    progressBar:73,
+  }
+];
 export default function Dashboard() {
     return(
     <>
@@ -11,45 +52,6 @@ export default function Dashboard() {
         </div>
         <button type="button">+ Add Workout</button>
       </div>
-      <div className={classes["cards-mini"]}>
-        <IconCard icon={<Dumbbell/>}>
-          <div className="stats-content">
-            <h3>Workouts this week</h3>
-            <div className="count">
-              <strong>5</strong>
-            </div>
-            <div className="result result_grow">↑ 12% vs last week</div>
-          </div>
-        </IconCard>
-        <IconCard icon={<Flame/>}>
-          <div className="stats-content">
-            <h3>Current streak</h3>
-            <div className="count">
-              <strong>8</strong> days
-            </div>
-            <div className="result">Keep it up!</div>
-          </div>
-        </IconCard>
-        <IconCard icon={<TrendingUp/>}>
-          <div className="stats-content">
-            <h3>Total volume</h3>
-            <div className="count">
-              <strong>18 400</strong> kg
-            </div>
-            <div className="result result_grow">↑ 8% vs last week</div>
-          </div>
-        </IconCard>
-        <IconCard icon={<Goal/>}>
-          <div className="stats-content">
-            <h3>Goal progress</h3>
-            <div className="count">
-              <strong>73%</strong>
-            </div>
-            <div className="loadbar">
-              <span className="loaded" style={{width:'73%'}}></span>
-            </div>
-          </div>
-        </IconCard>
-      </div>
+      <StatsGrid stats={STATS}/>
     </>);
   }

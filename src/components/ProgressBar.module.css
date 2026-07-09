@@ -1,0 +1,17 @@
+.loadbar{
+    height: 5px;
+    width: 100%;
+    border-radius: 10px;
+    background: rgb(from var(--color-primary) r g b / 10%);
+    position: relative;
+  }
+.loaded{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: data;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+    background-color: var(--color-primary);
+  }

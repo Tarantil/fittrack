@@ -1,0 +1,25 @@
+.icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background: rgb(from var(--color-primary) r g b / 20%);
+}
+.icon svg{
+    stroke:var(--color-primary-dark);
+}
+.card{
+    display: flex;
+    gap: 20px;
+    height: 100%;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    flex: 1;
+    gap: 10px;
+}

@@ -1,7 +1,7 @@
 .toggle-button{
     position: relative;
-    width: 30px;
-    height: 15px;
+    width: 34px;
+    height: 18px;
     display: block;
 }
 .toggle-button input{
@@ -22,19 +22,20 @@
     position: absolute;
     display: flex;
     align-items: center;
-    height: 11px;
-    width: 11px;
+    height: 14px;
+    width: 14px;
     left: 2px;
     bottom: 2px;
+    padding: 2px;
     border-radius: 100%;
     background-color: #fff;
     -webkit-transition: .4s;
     transition: .4s;
 }
 .toggle-button input:checked + .slider .tumbler{
-    -webkit-transform: translateX(15px);
-    -ms-transform: translateX(15px);
-    transform: translateX(15px);
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
 }
 .toggle-button input:checked + .slider{
     background-color: var(--color-primary);

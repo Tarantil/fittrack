@@ -137,38 +137,3 @@ h4 {
 h1{
   margin-bottom: 10px;
 }
-.stats-content{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-}
-.stats-content .count strong{
-  font-size: var(--font-size-h1);
-
-}
-.stats-content .result{
-  font-size: var(--font-size-caption);
-  line-height: var(--line-height-heading);
-  color: var(--color-text-muted);
-}
-.stats-content .result_grow{
-  color: var(--color-primary);
-}
-.stats-content .loadbar{
-  height: 5px;
-  width: 100%;
-  border-radius: 10px;
-  background: rgb(from var(--color-primary) r g b / 10%);
-  position: relative;
-}
-.stats-content .loaded{
-  content: '';
-  position: absolute;
-  height: 100%;
-  width: data;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-  background-color: var(--color-primary);
-}
