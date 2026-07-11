@@ -22,7 +22,7 @@
   --font-size-h1: 2rem;        /* 32px */
   --font-size-h2: 1.5rem;      /* 24px */
   --font-size-h3: 1.125rem;    /* 18px */
-  --font-size-h4: 1.125rem;    /* 18px */
+  --font-size-h4: 1rem;    /* 16px */
 
   --font-size-body-lg: 1.125rem; /* 18px */
   --font-size-body: 1rem;        /* 16px */
@@ -65,6 +65,7 @@
   margin: 0;
 }
 body {
+  font-family: var(--font-family);
   font-size: var(--font-size-body);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-body);
@@ -94,7 +95,7 @@ button {
   border-radius: 5px;
   background-color: var(--color-primary);
   color: var(--color-surface-soft);
-  transition: color .2s linear;
+  transition: color .2s linear, background .2s linear;
 }
 button:hover{
   background-color: var(--color-primary-dark);

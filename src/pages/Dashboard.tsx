@@ -1,4 +1,6 @@
+import RecentWorkouts from '../components/features/RecentWorkouts';
 import StatsGrid from '../components/features/StatsGrid';
+import Grid from '../components/ui/Grid';
 import classes from './Dashboard.module.css';
 import { Dumbbell, Flame, TrendingUp, Goal } from 'lucide-react';
 type Stat = {
@@ -53,5 +55,9 @@ export default function Dashboard() {
         <button type="button">+ Add Workout</button>
       </div>
       <StatsGrid stats={STATS}/>
+      <Grid columns={2}>
+        <RecentWorkouts />
+      </Grid>
+      
     </>);
   }

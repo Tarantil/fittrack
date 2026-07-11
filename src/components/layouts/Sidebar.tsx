@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/logo-dark.png";
-import logoLight from "../assets/logo.png";
+import logo from "../../assets/logo-dark.png";
+import logoLight from "../../assets/logo.png";
 import classes from "./Sidebar.module.css";
 type SidebarProps = {
     mode: 'light'|'dark'

@@ -1,4 +1,5 @@
 import Card from "../ui/Card";
+import RoundIcon from "../ui/RoundIcon";
 import classes from "./StatsCard.module.css";
 type StatsCardProps = {
     icon: React.JSX.Element,
@@ -9,7 +10,7 @@ export default function StatsCard({icon, title, children}:StatsCardProps){
     return (<>
     <Card>
         <div className={classes.card}>
-            <div className={classes.icon}>{icon}</div>
+            <RoundIcon icon={icon} size="large"/>
             <div className={classes.content}>
                 <h3>{title}</h3>
                 <div>
