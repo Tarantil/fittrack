@@ -2,17 +2,18 @@ import classes from './Widget.module.css';
 import { Link } from 'react-router-dom'; 
 type WidgetProps = {
     title:string,
+    icon?:React.JSX.Element,
     link?:{
         url:string,
         title:string
     },
-    children:React.ReactElement
+    children:React.ReactNode
 };
-export default function Widget({title, link, children}:WidgetProps){
+export default function Widget({title, icon, link, children}:WidgetProps){
     return (
         <>
         <div className={classes.head}>
-            <h2>{title}</h2>
+            <h2>{icon}{title}</h2>
             {link && <Link to={link.url} className={classes.button}>{link.title}</Link>}
         </div>
         <div>

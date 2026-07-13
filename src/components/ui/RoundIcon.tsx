@@ -5,6 +5,6 @@ type RoundIconProps={
 }
 export default function RoundIcon({icon, size}:RoundIconProps){
     return (
-        <div className={`${classes.icon} ${classes[`${size}`]}`}>{icon}</div>
+        <div className={`${classes.icon} ${classes[size]}`}>{icon}</div>
     );
 }

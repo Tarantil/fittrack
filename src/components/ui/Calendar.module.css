@@ -1,0 +1,36 @@
+.head{
+    margin: 40px 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.calendar{
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(7, minmax(0,1fr));
+    gap: 20px;
+}
+.day{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    cursor: pointer;
+    background-color: transparent;
+    transition: color .2s linear, background .2s linear;
+}
+.day:hover{
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+}
+.day-name{
+    text-align: center;
+    color: var(--color-text-muted);
+}
+.buttons{
+    display: flex;
+    gap: 5px;
+}

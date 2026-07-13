@@ -3,6 +3,7 @@
     width: 34px;
     height: 18px;
     display: block;
+    cursor: pointer;
 }
 .toggle-button input{
     opacity: 0;

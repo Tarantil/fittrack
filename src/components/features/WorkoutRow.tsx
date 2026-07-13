@@ -1,47 +1,44 @@
 import { useRef, useState } from 'react';
 import classes from './WorkoutRow.module.css';
 import { useClickOutside } from '../../hooks/useClickOutside';
-type WorkoutRowProps = {
-    icon:React.JSX.Element,
-    name:string,
-    date:string,
-    duration:number,
-    numExercises:number,
-    totalWeight:number
-}
-export default function WorkoutRow({icon, name, date, duration, numExercises, totalWeight}:WorkoutRowProps){
+import Button from '../ui/Button';
+import type { Workout } from '../../types/workout.types';
+import RoundIcon from '../ui/RoundIcon';
+import { Link } from 'react-router-dom';
+import { Eye, Pencil, Trash2 } from 'lucide-react';
+
+export default function WorkoutRow({id, icon, name, date, duration, exerciseCount, totalVolume}:Workout){
     const [dropdownIsVisible, setDropdownIsVisible] = useState(false);
     const dropdownRef = useRef<HTMLDivElement>(null);
-    function handleShowDropdown(){
-        setDropdownIsVisible(true);
+    function handleDropdownVisibility(){
+        setDropdownIsVisible(prev=>!prev);
     }
-    function handleHideDropdown(){
-        setDropdownIsVisible(false);
-    }
-    
+    useClickOutside(dropdownRef, ()=>setDropdownIsVisible(false), dropdownIsVisible);
+   
     
     return (
         <div className={classes.row}>
             <div className={classes.head}>
-                {icon}
+                <RoundIcon icon={icon} size="medium" />
                 <div className={classes.description}>
                     <h4>{name}</h4>
                     <p>{date}・{duration} min</p>
                 </div>
             </div>
             <div className={classes.exercises}>
-                {numExercises} exercises
+                {exerciseCount} exercises
             </div>
             <div>
-                <p>{totalWeight} kg</p>
+                <p>{totalVolume} kg</p>
             </div>
             <div className={classes["dots-wrapper"]} >
-                <div className={classes.dots} onMouseOver={handleShowDropdown} onMouseOut={handleHideDropdown} ref={dropdownRef}>⋮
-                <div className={`${classes.dropdown} ${dropdownIsVisible ?classes.active:undefined}`}>
+                <div className={classes.dots} ref={dropdownRef}>
+                    <Button className={classes.button} onClick={handleDropdownVisibility}>⋮</Button>
+                    <div className={`${classes.dropdown} ${dropdownIsVisible ?classes.active:''}`}>
                     <ul>
-                        <li>View</li>
-                        <li>Edit</li>
-                        <li>Delete</li>
+                        <li><Link to={`/workout/${id}`}><Eye size={16} strokeWidth={1} /> View</Link></li>
+                        <li><Button><Pencil size={16} strokeWidth={1} /> Edit</Button></li>
+                        <li><Button className={classes['delete-btn']}><Trash2 size={16} strokeWidth={1} /> Delete</Button></li>
                     </ul>
                 </div>
                 </div>

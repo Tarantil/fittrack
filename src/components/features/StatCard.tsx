@@ -1,13 +1,13 @@
 import Card from "../ui/Card";
 import RoundIcon from "../ui/RoundIcon";
-import classes from "./StatsCard.module.css";
-type StatsCardProps = {
+import classes from "./StatCard.module.css";
+type StatCardProps = {
     icon: React.JSX.Element,
     title:string,
-    children:React.ReactElement
+    children:React.ReactNode
 };
-export default function StatsCard({icon, title, children}:StatsCardProps){
-    return (<>
+export default function StatCard({icon, title, children}:StatCardProps){
+    return (
     <Card>
         <div className={classes.card}>
             <RoundIcon icon={icon} size="large"/>
@@ -19,5 +19,5 @@ export default function StatsCard({icon, title, children}:StatsCardProps){
             </div>
         </div>
     </Card>
-    </>);
+    );
 }

@@ -1,11 +1,11 @@
 import classes from './ProgressBar.module.css';
 type ProgressBarProps={
-    loaded:number
+    percentage:number
 }
-export default function ProgressBar({loaded}:ProgressBarProps){
+export default function ProgressBar({percentage}:ProgressBarProps){
     return (
         <div className={classes.loadbar}>
-            <span className={classes.loaded} style={{width:`${loaded}%`}}></span>
+            <span className={classes.loaded} style={{width:`${percentage}%`}}></span>
         </div>
     );
 }
