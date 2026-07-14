@@ -54,7 +54,7 @@
     list-style-type: none;
 }
 .dropdown li{
-    padding: 2px 0;
+    padding: 4px 0;
 }
 .dropdown a{
     display: flex;
@@ -68,7 +68,7 @@
     visibility: visible;
 }
 .delete-btn{
-    color: var(--color-danger);
+    color: var(--color-danger)!important;
 }
 .delete-btn:hover{
     color: var(--color-danger)!important;

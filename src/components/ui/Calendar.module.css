@@ -18,17 +18,21 @@
     align-items: center;
     justify-content: center;
     justify-self: center;
-    cursor: pointer;
     background-color: transparent;
+    font-weight: var(--font-weight-medium);
     transition: color .2s linear, background .2s linear;
 }
-.day:hover{
+.day:hover, .day.active{
     background-color: var(--color-primary);
     color: var(--color-surface);
+}
+.prev-day{
+    color: var(--color-text-muted);
 }
 .day-name{
     text-align: center;
     color: var(--color-text-muted);
+    font-weight: var(--font-weight-medium);
 }
 .buttons{
     display: flex;

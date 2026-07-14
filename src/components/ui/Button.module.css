@@ -4,6 +4,7 @@
     border: 0;
     background-color: unset;
     border-radius: 5px;
+    color: inherit;
     cursor: pointer;
     display: flex;
     align-items: center;
