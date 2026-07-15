@@ -1,3 +1,4 @@
+import BodyStats from '../components/features/BodyStats';
 import RecentWorkouts from '../components/features/RecentWorkouts';
 import StatsGrid from '../components/features/StatsGrid';
 import WorkoutCalendar from '../components/features/WorkoutCalendar';
@@ -66,6 +67,24 @@ const WORKOUTS:Workout[]=[
     duration:72,
     exerciseCount:18,
     totalVolume:18400
+  },
+  {
+    id:'leg-day-140726',
+    icon:<Dumbbell />,
+    name:"Leg Day",
+    date:"July 7",
+    duration:72,
+    exerciseCount:18,
+    totalVolume:18400
+  },
+  {
+    id:'push-day-150726',
+    icon:<Dumbbell />,
+    name:"Push Day",
+    date:"July 5",
+    duration:72,
+    exerciseCount:18,
+    totalVolume:18400
   }
 ]
 export default function Dashboard() {
@@ -83,6 +102,8 @@ export default function Dashboard() {
         <RecentWorkouts workouts={WORKOUTS}/>
         <WorkoutCalendar />
       </Grid>
-      
+      <Grid columns={3}>
+        <BodyStats/>
+      </Grid>
     </>);
   }

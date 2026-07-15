@@ -1,5 +1,5 @@
 .head{
-    margin: 40px 0 20px;
+    margin: 20px 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -8,7 +8,7 @@
     display: grid;
     align-items: center;
     grid-template-columns: repeat(7, minmax(0,1fr));
-    gap: 20px;
+    gap: 10px;
 }
 .day{
     width: 40px;
@@ -20,7 +20,7 @@
     justify-self: center;
     background-color: transparent;
     font-weight: var(--font-weight-medium);
-    transition: color .2s linear, background .2s linear;
+    transition: color .12s linear, background-color .12s linear;
 }
 .day:hover, .day.active{
     background-color: var(--color-primary);

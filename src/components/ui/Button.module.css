@@ -9,7 +9,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: color .2s linear, background .2s linear, border .2s linear;
+    transition: color .12s linear, background-color .12s linear, border .12s linear;
 }
 .button:hover{
     color: var(--color-primary-dark);

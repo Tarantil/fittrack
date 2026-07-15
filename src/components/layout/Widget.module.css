@@ -4,7 +4,7 @@
     justify-content: space-between;
     margin-bottom: 20px;
 }
-.head h2{
+.title{
     display: flex;
     align-items: center;
     gap: 5px;
@@ -24,7 +24,7 @@
     border-radius: 5px;
     background-color: var(--color-surface);
     color: var(--color-text);
-    transition: color .2s linear, background .2s linear, border .2s linear;
+    transition: color .12s linear, background-color .12s linear, border .12s linear;
 }
 .button:hover{
     background-color: var(--color-primary-dark);

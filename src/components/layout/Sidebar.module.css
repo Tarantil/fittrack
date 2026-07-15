@@ -23,7 +23,7 @@
     padding: 10px 20px;
     display: flex;
     border-radius: 10px;
-    transition: color .2s, background .2s;
+    transition: color .12s, background-color .12s;
 }
 .nav a:hover{
     color: var(--color-primary-dark);
