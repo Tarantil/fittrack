@@ -1,21 +1,16 @@
 import { Outlet } from "react-router-dom";
 import MainNavigation from "../components/layout/MainNavigation";
-import { useState } from "react";
 import Sidebar from "../components/layout/Sidebar";
 import classes from "./Root.module.css";
+import { useTheme } from "../hooks/useTheme";
 export default function RootLayout(){
-    const [mode, setMode] = useState<'light'|'dark'>('light');
-    
-    function handleModeToggle(){
-        setMode((prev)=>prev=='light'?'dark':'light');
-    }
-
+    const {theme} = useTheme();
     return (
-        <div className="app" data-theme={mode}>
+        <div className="app" data-theme={theme}>
         
-                <Sidebar mode={mode}/>
+                <Sidebar/>
                 <div className={classes.main}>
-                    <MainNavigation onSetMode={handleModeToggle} toggleIsChecked={mode==='dark'}/>
+                    <MainNavigation/>
                     <Outlet />
                 </div>
         </div>

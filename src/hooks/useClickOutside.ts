@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export function useClickOutside(element:React.RefObject<HTMLElement>, callback:()=>void, enabled:boolean){
+export function useClickOutside<T extends HTMLElement>(element:React.RefObject<T | null>, callback:()=>void, enabled:boolean){
     
     useEffect(()=>{
 

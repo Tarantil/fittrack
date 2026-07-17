@@ -51,7 +51,7 @@ export default function Calendar(){
     return (
         <>
             <div className={classes.head}>
-                <h3>{MONTHS[currentMonth]} {currentYear}</h3>
+                <h4>{MONTHS[currentMonth]} {currentYear}</h4>
                 <div className={classes.buttons}>
                     <Button onClick={()=>handleMonthChange('prev')}  aria-label="Previous month"><ChevronLeft /></Button>
                     <Button onClick={()=>handleMonthChange('next')}  aria-label="Next month"><ChevronRight /></Button>

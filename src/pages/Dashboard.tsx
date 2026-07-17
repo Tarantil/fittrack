@@ -1,8 +1,10 @@
 import BodyStats from '../components/features/BodyStats';
+import Goals from '../components/features/Goals';
 import RecentWorkouts from '../components/features/RecentWorkouts';
+import Records from '../components/features/Records';
 import StatsGrid from '../components/features/StatsGrid';
 import WorkoutCalendar from '../components/features/WorkoutCalendar';
-import Button from '../components/ui/Button';
+import ButtonLink from '../components/ui/ButtonLink';
 import Grid from '../components/ui/Grid';
 import type {Stat} from '../types/stat.types';
 import type { Workout } from '../types/workout.types';
@@ -95,7 +97,7 @@ export default function Dashboard() {
           <h1>Welcome, Ilona!👋</h1>
           <p>You've got this! Let's crush your goals today.</p>
         </div>
-        <Button variant='primary'>+ Add Workout</Button>
+        <ButtonLink url='/workouts/new' variant='primary'>+ Add Workout</ButtonLink>
       </div>
       <StatsGrid stats={STATS}/>
       <Grid columns={2}>
@@ -104,6 +106,8 @@ export default function Dashboard() {
       </Grid>
       <Grid columns={3}>
         <BodyStats/>
+        <Records />
+        <Goals />
       </Grid>
     </>);
   }

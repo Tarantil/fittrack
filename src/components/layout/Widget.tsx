@@ -1,6 +1,6 @@
+import ButtonLink from '../ui/ButtonLink';
 import Card from '../ui/Card';
 import classes from './Widget.module.css';
-import { Link } from 'react-router-dom'; 
 type WidgetProps = {
     title:string,
     icon?:React.JSX.Element,
@@ -8,17 +8,20 @@ type WidgetProps = {
         url:string,
         title:string
     },
-    children:React.ReactNode
+    children:React.ReactNode,
+    size?:'small'|'medium'
 };
-export default function Widget({title, icon, link, children}:WidgetProps){
+export default function Widget({title, icon, link, children, size}:WidgetProps){
     return (
         <Card>
-        <div className={classes.head}>
-            <h2 className={classes.title}>{icon}{title}</h2>
-            {link && <Link to={link.url} className={classes.button}>{link.title}</Link>}
-        </div>
-        <div>
-            {children}
+        <div className={size?classes[size]:undefined}>
+            <div className={classes.head}>
+                <h2 className={classes.title}>{icon}{title}</h2>
+                {link && <ButtonLink url={link.url} variant='outline' className={classes.button}>{link.title}</ButtonLink>}
+            </div>
+            <div>
+                {children}
+            </div>
         </div>
         </Card>
     );

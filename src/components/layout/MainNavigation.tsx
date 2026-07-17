@@ -1,20 +1,18 @@
+import { useTheme } from "../../hooks/useTheme";
 import ToggleButton from "../ui/ToggleButton";
 import classes from "./MainNavigation.module.css";
 import { Moon, Sun } from 'lucide-react';
-type MainNavigationProps = {
-    onSetMode: () => void,
-    toggleIsChecked: boolean
-};
 
-export default function MainNavigation({ onSetMode, toggleIsChecked }: MainNavigationProps) {
+export default function MainNavigation() {
+    const {theme, changeTheme} = useTheme();
     const iconProps={size:16, color:"#FBBF24", strokeWidth:1};
     return (
         <header className={classes.header}>
             <ToggleButton
                 name="mode"
-                icon={toggleIsChecked?<Sun {...iconProps} />:<Moon {...iconProps} />}
-                onChange={onSetMode}
-                checked={toggleIsChecked} />
+                icon={theme==='dark'?<Sun {...iconProps} />:<Moon {...iconProps} />}
+                onChange={changeTheme}
+                checked={theme==='dark'} />
         </header>
     );
 } 

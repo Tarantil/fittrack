@@ -1,0 +1,9 @@
+.goal{
+    margin-bottom: 15px;
+}
+.head{
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

@@ -6,6 +6,9 @@
     padding: 15px 0;
     border-top: 1.4px solid  rgb(from var(--color-text-muted) r g b / 10%);
 }
+.row:first-child{
+    border-top: none;
+}
 .head{
     display: flex;
     align-items: center;

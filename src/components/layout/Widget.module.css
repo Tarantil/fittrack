@@ -12,22 +12,17 @@
 .head svg{
     stroke-width: 1px;
 }
-.button {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 30px;
-    padding: 4px 10px;
+
+.small{
     font-size: var(--font-size-small);
-    border: 1px solid var(--color-text-muted);
-    border-radius: 5px;
-    background-color: var(--color-surface);
-    color: var(--color-text);
-    transition: color .12s linear, background-color .12s linear, border .12s linear;
 }
-.button:hover{
-    background-color: var(--color-primary-dark);
-    color: var(--color-surface);
-    border-color: var(--color-surface);
+.small .head{
+    margin-bottom: 15px;
+}
+.small .button{
+    min-height: 25px;
+    padding: 2px 4px;
+}
+.small .title{
+    font-size: var(--font-size-h4);
 }

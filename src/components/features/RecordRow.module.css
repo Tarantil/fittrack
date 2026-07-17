@@ -1,0 +1,19 @@
+.row{
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr) minmax(0, 1.5fr);
+    gap: 10px;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1.4px solid  rgb(from var(--color-text-muted) r g b / 10%);
+}
+.row:first-child{
+    border-top: none;
+}
+.name{
+    display: flex;
+    gap: 10px;
+    align-items: center;   
+}
+.date{
+    color: var(--color-text-muted);
+}
