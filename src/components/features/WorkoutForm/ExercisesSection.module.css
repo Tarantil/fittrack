@@ -1,0 +1,70 @@
+.head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.exercises-details{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 15px;
+    background-color: var(--color-primary-soft);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+.point{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.point svg{
+    stroke: var(--color-primary);
+}
+.point p{
+    color: var(--color-text-muted);
+    font-size: var(--font-size-small);
+}
+.count{
+    font-size: var(--font-size-body-lg);
+    font-weight: var(--font-weight-medium);
+}
+.no-results{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.no-results h4{
+    margin-top: 20px;
+}
+.no-results p{
+    color: var(--color-text-muted);
+}
+.add-exercise{
+    background-color: var(--color-primary-soft);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.close{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: var(--color-text-muted);
+}
+.details{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.center-btn{
+    margin: 0 auto;
+}

@@ -3,4 +3,6 @@
     background-color: var(--color-surface);
     box-shadow: var(--shadow-card);
     border-radius: 10px;
+    height: 100%;
+    margin-bottom: 20px;
 }

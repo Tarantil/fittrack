@@ -3,7 +3,7 @@ import Card from '../ui/Card';
 import classes from './Widget.module.css';
 type WidgetProps = {
     title:string,
-    icon?:React.JSX.Element,
+    icon?:React.ReactElement,
     link?:{
         url:string,
         title:string
@@ -17,7 +17,7 @@ export default function Widget({title, icon, link, children, size}:WidgetProps){
         <div className={size?classes[size]:undefined}>
             <div className={classes.head}>
                 <h2 className={classes.title}>{icon}{title}</h2>
-                {link && <ButtonLink url={link.url} variant='outline' className={classes.button}>{link.title}</ButtonLink>}
+                {link && <ButtonLink to={link.url} variant='outline' className={classes.button}>{link.title}</ButtonLink>}
             </div>
             <div>
                 {children}

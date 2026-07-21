@@ -1,10 +1,11 @@
 .row{
     display: grid;
-    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 12px);
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 1fr);
     gap: 15px;
     align-items: center;
-    padding: 15px 0;
+    padding: 15px 12px 15px 0;
     border-top: 1.4px solid  rgb(from var(--color-text-muted) r g b / 10%);
+    position: relative;
 }
 .row:first-child{
     border-top: none;
@@ -30,6 +31,8 @@
 .dots-wrapper{
     display: flex;
     justify-content: flex-end;
+    position: absolute;
+    right: 0;
 }
 .dots{
     position: relative;
@@ -69,11 +72,4 @@
 .dropdown.active{
     opacity: 1;
     visibility: visible;
-}
-.delete-btn{
-    color: var(--color-danger)!important;
-}
-.delete-btn:hover{
-    color: var(--color-danger)!important;
-    filter: brightness(0.8);
 }

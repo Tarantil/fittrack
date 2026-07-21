@@ -1,7 +1,7 @@
 import RoundIcon from '../ui/RoundIcon';
 import classes from './RecordRow.module.css';
 type RecordRowProps={
-    icon:React.JSX.Element,
+    icon:React.ReactElement,
     name:string,
     volume:number,
     date:string

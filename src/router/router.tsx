@@ -6,6 +6,7 @@ import Exercises from '../pages/Exercises';
 import Progress from '../pages/Progress';
 import Workouts from '../pages/Workouts';
 import NewWorkout from '../pages/NewWorkout';
+import { WorkoutDetails } from '../pages/WorkoutDetails';
 export const router = createBrowserRouter([
     {
         path: '/',
@@ -19,7 +20,8 @@ export const router = createBrowserRouter([
                 path: 'workouts', 
                 children: [
                     {index:true, element: <Workouts />},
-                    {path: 'new', element:<NewWorkout/>}
+                    {path: 'new', element:<NewWorkout />},
+                    {path:':workoutId', element:<WorkoutDetails />}
                 ]
              }
         ]

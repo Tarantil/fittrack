@@ -74,7 +74,10 @@
 *:not(dialog) {
   margin: 0;
 }
-
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
 body {
   font-family: var(--font-family);
   font-size: var(--font-size-body);
@@ -96,6 +99,10 @@ input,
 textarea,
 select {
   font: inherit;
+}
+fieldset{
+  border: none;
+  padding: 0;
 }
 
 img {
@@ -143,4 +150,7 @@ h4 {
   min-height: 100vh;
   background: var(--color-bg);
   color: var(--color-text);
+}
+@media only screen and (max-width: 600px) {
+
 }

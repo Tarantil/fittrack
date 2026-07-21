@@ -5,9 +5,7 @@ import Records from '../components/features/Records';
 import StatsGrid from '../components/features/StatsGrid';
 import WorkoutCalendar from '../components/features/WorkoutCalendar';
 import ButtonLink from '../components/ui/ButtonLink';
-import Grid from '../components/ui/Grid';
 import type {Stat} from '../types/stat.types';
-import type { Workout } from '../types/workout.types';
 import classes from './Dashboard.module.css';
 import { Dumbbell, Flame, TrendingUp, Goal } from 'lucide-react';
 const STATS:Stat[] =[
@@ -42,53 +40,7 @@ const STATS:Stat[] =[
     progressBar:73,
   }
 ];
-const WORKOUTS:Workout[]=[
-  {
-    id:'leg-day-130726',
-    icon:<Dumbbell />,
-    name:"Leg Day",
-    date:"Yesterday",
-    duration:72,
-    exerciseCount:18,
-    totalVolume:18400
-  },
-  {
-    id:'push-day-110726',
-    icon:<Dumbbell />,
-    name:"Push Day",
-    date:"July 11",
-    duration:72,
-    exerciseCount:18,
-    totalVolume:18400
-  },
-  {
-    id:'pull-day-090726',
-    icon:<Dumbbell />,
-    name:"Pull Day",
-    date:"July 9",
-    duration:72,
-    exerciseCount:18,
-    totalVolume:18400
-  },
-  {
-    id:'leg-day-140726',
-    icon:<Dumbbell />,
-    name:"Leg Day",
-    date:"July 7",
-    duration:72,
-    exerciseCount:18,
-    totalVolume:18400
-  },
-  {
-    id:'push-day-150726',
-    icon:<Dumbbell />,
-    name:"Push Day",
-    date:"July 5",
-    duration:72,
-    exerciseCount:18,
-    totalVolume:18400
-  }
-]
+
 export default function Dashboard() {
     return(
     <>
@@ -97,17 +49,25 @@ export default function Dashboard() {
           <h1>Welcome, Ilona!👋</h1>
           <p>You've got this! Let's crush your goals today.</p>
         </div>
-        <ButtonLink url='/workouts/new' variant='primary'>+ Add Workout</ButtonLink>
+        <ButtonLink to='/workouts/new' variant='primary'>+ Add Workout</ButtonLink>
       </div>
       <StatsGrid stats={STATS}/>
-      <Grid columns={2}>
-        <RecentWorkouts workouts={WORKOUTS}/>
-        <WorkoutCalendar />
-      </Grid>
-      <Grid columns={3}>
-        <BodyStats/>
-        <Records />
-        <Goals />
-      </Grid>
+      <div className={classes.layout}>
+        <div className={classes.workout}>
+          <RecentWorkouts />
+        </div>
+        <div className={classes.calendar}>
+          <WorkoutCalendar />
+        </div>
+        <div className={classes.bodystats}>
+          <BodyStats/>
+        </div>
+        <div className={classes.records}>
+          <Records />
+        </div>
+        <div className={classes.goals}>
+          <Goals />
+        </div>
+      </div>
     </>);
   }

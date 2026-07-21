@@ -1,10 +1,10 @@
 import classes from './Button.module.css';
 type ButtonProps={
     children:React.ReactNode,
-    variant?:'outline'|'primary',
+    variant?:'ghost'|'danger-ghost'|'outline'|'primary',
     className?:string
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;
-export default function Button({children, variant, className, ...props}:ButtonProps){
+export default function Button({children, variant='ghost', className, ...props}:ButtonProps){
     let styles = `${classes.button}`;
     if(variant){
         styles+= ` ${classes[variant]}`

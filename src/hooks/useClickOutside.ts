@@ -6,7 +6,7 @@ export function useClickOutside<T extends HTMLElement>(element:React.RefObject<T
 
         const outsideClickListener = (event:MouseEvent) => {
         
-            if(element?.current && event.target instanceof Node){
+            if(element.current && event.target instanceof Node){
                 if (!element.current.contains(event.target)) { 
                     callback();
                 }

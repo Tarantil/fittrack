@@ -22,8 +22,13 @@
 .nav a{
     padding: 10px 20px;
     display: flex;
+    align-items: center;
+    gap: 5px;
     border-radius: 10px;
     transition: color .12s, background-color .12s;
+}
+.nav svg{
+    height: 16px;
 }
 .nav a:hover{
     color: var(--color-primary-dark);

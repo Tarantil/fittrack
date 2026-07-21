@@ -1,7 +1,7 @@
 import classes from "./ToggleButton.module.css";
 type ToggleButtonProps = {
     name:string,
-    icon?: React.JSX.Element ,
+    icon?: React.ReactElement,
     onChange:()=>void,
     checked:boolean,
 }

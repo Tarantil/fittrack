@@ -4,15 +4,24 @@
     border: 0;
     background-color: unset;
     border-radius: 5px;
-    color: inherit;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: color .12s linear, background-color .12s linear, border .12s linear;
 }
-.button:hover{
+.ghost{
+    color: inherit;
+}
+.ghost:hover{
     color: var(--color-primary-dark);
+}
+.danger-ghost{
+    color: var(--color-danger);
+}
+.danger-ghost:hover{
+    color: var(--color-danger);
+    filter: brightness(0.8);
 }
 .primary {
     min-height: 40px;

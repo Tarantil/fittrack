@@ -2,7 +2,7 @@ import Card from "../ui/Card";
 import RoundIcon from "../ui/RoundIcon";
 import classes from "./StatCard.module.css";
 type StatCardProps = {
-    icon: React.JSX.Element,
+    icon:React.ReactElement
     title:string,
     children:React.ReactNode
 };

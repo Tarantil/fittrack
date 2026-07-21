@@ -8,3 +8,14 @@
 .head h1{
     margin-top: 0;
 }
+.layout{
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 20px;
+}
+.bodystats, .records, .goals{
+    grid-column: span 4;
+}
+.workout, .calendar{
+    grid-column: span 6;
+}
