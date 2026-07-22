@@ -9,6 +9,7 @@ import { Eye, Pencil, Trash2 } from 'lucide-react';
 import { useWorkouts } from '../../hooks/useWorkouts';
 import { getWorkoutStats } from '../../utils/workoutStats';
 import { workoutTypeConfig } from '../../config/workoutTypes';
+import { formatWorkoutDate } from '../../utils/formatWorkoutDate';
 
 export default function WorkoutRow({ id, type, name, date, exercises }: Workout) {
     const {totalVolume} = getWorkoutStats(exercises);
@@ -27,7 +28,7 @@ export default function WorkoutRow({ id, type, name, date, exercises }: Workout)
                 <RoundIcon icon={<Icon />} size="medium" />
                 <div className={classes.description}>
                     <h4>{name}</h4>
-                    <p>{date}</p>
+                    <p>{formatWorkoutDate(date)}</p>
                 </div>
             </div>
             <div className={classes.exercises}>
@@ -47,7 +48,7 @@ export default function WorkoutRow({ id, type, name, date, exercises }: Workout)
                     <div className={`${classes.dropdown} ${dropdownIsVisible ? classes.active : ''}`} role="menu">
                         <ul>
                             <li><Link to={`/workouts/${id}`}><Eye size={16} strokeWidth={1} /> View</Link></li>
-                            <li><Button><Pencil size={16} strokeWidth={1} /> Edit</Button></li>
+                            <li><Link to={`/workouts/${id}/edit`}><Pencil size={16} strokeWidth={1} /> Edit</Link></li>
                             <li><Button variant='danger-ghost' onClick={()=>deleteWorkout(id)}><Trash2 size={16} strokeWidth={1} /> Delete</Button></li>
                         </ul>
                     </div>

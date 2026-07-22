@@ -8,8 +8,7 @@ export default function NewWorkout(){
                 <p>Create a new workout and exercises to track your progress.</p>
             </div>
             <div className={classes.content}>
-                    <WorkoutForm />
-                
+                    <WorkoutForm mode="add"/> 
             </div>
         </>
     );

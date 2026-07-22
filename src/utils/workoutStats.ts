@@ -1,6 +1,6 @@
-import type { Exersise } from "../types/workout.types";
+import type { Exercise } from "../types/workout.types";
 
-export function getWorkoutStats(exercises:Exersise[]){
+export function getWorkoutStats(exercises:Exercise[]){
     return  exercises.reduce(
         (stats, exercise) => {
             stats.totalSets += exercise.sets;

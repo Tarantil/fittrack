@@ -1,13 +1,21 @@
-import { WORKOUT_TYPES } from "../config/workoutTypes"
-
+const WORKOUT_TYPES = [
+    "push",
+    "pull",
+    "legs",
+    "full-body",
+    "cardio",
+    "other",
+  ] as const;
+export type WorkoutType = typeof WORKOUT_TYPES[number];
 export type Workout = {
     id:string,
     name:string,
     date:string,
-    type:'push'|'pull'|'legs'|'full-body'|'cardio'|'other',
-    exercises:Exersise[]
+    type:WorkoutType,
+    exercises:Exercise[]
 }
-export type Exersise = {
+export type Exercise = {
+    id:string,
     name:string,
     sets:number,
     reps:number,
@@ -16,11 +24,9 @@ export type Exersise = {
 export type WorkoutsContextObj = {
     workouts:Workout[],
     addWorkout:(workout:NewWorkout)=>void,
-    editWorkout:(id: string, workout:Workout)=>void,
+    editWorkout:(id: string, workout:NewWorkout)=>void,
     deleteWorkout:(id: string)=>void
 }
 
 export type NewWorkout = Omit<Workout, "id">;
-
-  
-export type WorkoutType = typeof WORKOUT_TYPES[number];
+export type NewExercise = Omit<Exercise, "id">;

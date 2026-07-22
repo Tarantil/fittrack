@@ -1,14 +1,6 @@
 import type { WorkoutType } from "../types/workout.types";
 import { Dumbbell, Ellipsis, HeartPulse, LensConcave, SportShoe } from "lucide-react";
 import { type LucideIcon } from 'lucide-react';
-export const WORKOUT_TYPES = [
-    "push",
-    "pull",
-    "legs",
-    "full-body",
-    "cardio",
-    "other",
-  ] as const;
 
   export const workoutTypeConfig = {
     push: {

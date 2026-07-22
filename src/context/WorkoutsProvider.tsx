@@ -9,10 +9,10 @@ const WORKOUTS:Workout[]=[
       id:'leg-day-130726',
       type:'push',
       name:"Leg Day",
-      date:"Yesterday",
+      date:"2026-07-21T13:21",
       exercises:[
-        {name:'Leg Press', sets:4, reps:12, weight:20},
-        {name:'Goblet Squat', sets:4, reps:12, weight:40}
+        {id:'exercise-1-130726', name:'Leg Press', sets:4, reps:12, weight:20},
+        {id:'exercise-2-130726', name:'Goblet Squat', sets:4, reps:12, weight:40}
       ]
     },
   ]
